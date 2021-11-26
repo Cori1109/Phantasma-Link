@@ -1,0 +1,362 @@
+<head>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+	<link rel = "stylesheet" type = "text/css" href = "style.css" />
+
+	<script src="../Shared/phantasma.js"></script>
+	<link rel = "stylesheet" type = "text/css" href = "../Shared/phantasma.css" />	
+</head>
+
+<body>
+	<div class="container">
+		<div class="view-account">
+			<section class="module">
+				<div class="module-inner">
+					<div class="side-bar">
+						<div class="user-info">
+							<img id="account_avatar" class="img-profile img-responsive center-block" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
+							<ul class="meta list list-unstyled">
+								<li id="account_name" class="name">Rebecca Sanders
+									<label class="label label-info">UX Designer</label>
+								</li>
+								<li id="account_address" class="email"><a href="#">Rebecca.S@website.com</a></li>
+								<li id="account_connection" class="activity">Last logged in: Today at 2:18pm</li>
+							</ul>
+						</div>
+						<nav class="side-menu">
+							<ul class="nav">
+								<li><a href="#"><span class="fa fa-user"></span> Profile</a></li>
+								<li><a href="#"><span class="fa fa-cog"></span> Settings</a></li>
+								<li class="active"><a href="#"><span class="fa fa-credit-card"></span> Billing</a></li>
+								<li><a href="#"><span class="fa fa-envelope"></span> Messages</a></li>
+
+								<li><a href="user-drive.html"><span class="fa fa-th"></span> Drive</a></li>
+								<li><a href="#"><span class="fa fa-clock-o"></span> Reminders</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="content-panel">
+						<div class="content-header-wrapper">
+							<h2 class="title">My Phantasma Drive</h2>
+							<div class="actions">
+								<button class="btn btn-success"><i class="fa fa-plus"></i> Upload New Item</button>
+							</div>
+						</div>
+						<div class="content-utilities">
+							<div class="page-nav">
+								<span class="indicator">View:</span>
+								<div class="btn-group" role="group">
+									<button class="active btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Grid View" id="drive-grid-toggle"><i class="fa fa-th-large"></i></button>
+									<button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="List View" id="drive-list-toggle"><i class="fa fa-list-ul"></i></button>
+								</div>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">All Items <span class="caret"></span></button>
+									<ul class="dropdown-menu">
+										<li><a href="#"><i class="fa fa-file"></i> Documents</a></li>
+										<li><a href="#"><i class="fa fa-file-image-o"></i> Images</a></li>
+										<li><a href="#"><i class="fa fa-file-video-o"></i> Media Files</a></li>
+										<li><a href="#"><i class="fa fa-folder"></i> Folders</a></li>
+									</ul>
+								</div>
+								<div class="btn-group">
+									<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><i class="fa fa-filter"></i> Sorting <span class="caret"></span></button>
+									<ul class="dropdown-menu">
+										<li><a href="#">Newest first</a></li>
+										<li><a href="#">Oldest first</a></li>
+									</ul>
+								</div>
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Refresh"><i class="fa fa-sync"></i></button>
+									<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Archive"><i class="fa fa-archive"></i></button>
+
+									<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Report spam"><i class="fa fa-exclamation-triangle"></i></button>
+									<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete"><i class="fa fa-trash"></i></button>
+								</div>
+							</div>
+						</div>
+						<!--<div class="drive-wrapper drive-grid-view">
+							<div class="grid-items-wrapper">
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Meeting Notes.txt</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-text-o text-primary"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Phantasma.JPG</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><img class="img-responsive" src="https://phantasma.io/img/slide-img-3.jpg" alt=""></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">dapps.ppt</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-powerpoint-o text-warning"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Project Tasks.csv</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-excel-o text-success"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Project Brief.pdf</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-pdf-o text-danger"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Image DS1341.JPG</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><img class="img-responsive" src="https://phantasma.io/img/slide-img-1.jpg" alt=""></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Image DS3214.JPG</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><img class="img-responsive" src="https://phantasma.io/img/slide-img-6.jpg" alt=""></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">UX Resource</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-folder text-primary"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Prototypes</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-folder text-primary"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Sketch-source-files.zip</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-zip-o text-primary"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Partnerships.doc</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-word-o text-info"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">Exchanges.doc</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-word-o text-info"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">demo.html</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><i class="fa fa-file-code-o text-primary"></i></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="drive-item module text-center">
+									<div class="drive-item-inner module-inner">
+										<div class="drive-item-title"><a href="#">nacho.JPG</a></div>
+										<div class="drive-item-thumb">
+											<a href="#"><img class="img-responsive" src="https://phantasma.io/img/nacho-front.png" alt=""></a>
+										</div>
+									</div>
+									<div class="drive-item-footer module-footer">
+										<ul class="utilities list-inline">
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fa fa-download"></i></a></li>
+											<li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>-->
+
+						<div class="drive-wrapper drive-list-view">
+							<div class="table-responsive drive-items-table-wrapper">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="type"></th>
+											<th class="name truncate">Name</th>
+											<th class="date">Uploaded</th>
+											<th class="size">Size</th>
+										</tr>
+									</thead>
+									<tbody id="file_list">
+										<tr>
+											<td class="type"><i class="fa fa-file-text-o text-primary"></i></td>
+											<td class="name truncate"><a href="#">Meeting Notes.txt</a></td>
+											<td class="date">Sep 23, 2015</td>
+											<td class="size">18 KB</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+<script>
+$(function(){
+    $("[data-toggle='tooltip']").tooltip();
+})
+
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+let link = new PhantasmaLink("Files");
+link.login( function(success) {
+	if (success) {
+		$("#account_avatar").attr("src", link.account.avatar);
+		$('#account_name').text(link.account.name);						
+		$('#account_address').text(link.account.address.trunc(12));						
+		$('#account_connection').html('<i class="fas fa-bullseye"></i> ' + link.wallet);
+		
+		$('#file_list').empty();
+						
+		
+		let files = link.account.files;
+		if (files) {
+			for (let i=0; i<files.length; i++) {
+				let file = files[i];
+				let size = humanFileSize(file.size, true);
+				
+				let d = new Date(file.date * 1000);				
+				let date  = months[d.getMonth()] + ' '+d.getDate()+ ', '+d.getFullYear();
+				$('#file_list').append('<tr><td class="type"><i class="fa fa-file-text-o text-primary"></i></td><td class="name truncate"><a href="#"><i class="fas fa-download"></i></a>&nbsp;&nbsp;'+file.name+'</td><td class="date">'+date+'</td><td class="size">'+size+'</td></tr>');
+			}
+		}
+	}
+});
+
+function humanFileSize(bytes, si) {
+    var thresh = si ? 1000 : 1024;
+    if(Math.abs(bytes) < thresh) {
+        return bytes + ' B';
+    }
+    var units = si
+        ? ['kB','MB','GB','TB','PB','EB','ZB','YB']
+        : ['KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB'];
+    var u = -1;
+    do {
+        bytes /= thresh;
+        ++u;
+    } while(Math.abs(bytes) >= thresh && u < units.length - 1);
+    return bytes.toFixed(1)+' '+units[u];
+}
+</script>
+
+</body>

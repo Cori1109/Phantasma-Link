@@ -1,0 +1,104 @@
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Phantasma Chat</title>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+	<script src="../Shared/phantasma.js"></script>
+	<link rel = "stylesheet" type = "text/css" href = "../Shared/phantasma.css" />
+
+  <script>
+  window.console = window.console || function(t) {};
+
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+
+  
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div class="header">
+      <div class="team-menu">Team Phantasma</div>
+      <div class="channel-menu"><span class="channel-menu_name"><span class="channel-menu_prefix">#</span>admin</span></div>
+    </div>
+    <div class="main">
+      <div class="listings">
+        <div class="listings_channels">
+          <h2 class="listings_header">Channels</h2>
+          <ul class="channel_list">
+            <li class="channel active"><a class="channel_name"><span class="unread">0</span><span><span class="prefix">#</span>admin</span></a></li>
+            <li class="channel"><a class="channel_name"><span class="unread">10</span><span><span class="prefix">#</span>general</span></a></li>
+          </ul>
+        </div>
+        <div class="listings_direct-messages">
+          <h2 class="listings_header">Direct Messages</h2>
+          <ul class="channel_list">
+            <li class="channel"><a class="channel_name"><span class="unread">5</span><span><span class="prefix"> </span>lee</span></a></li>
+            <li class="channel"><a class="channel_name"><span class="unread">3</span><span><span class="prefix"> </span>bill</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="message-history">
+        <div class="message"><a class="message_profile-pic" href=""></a><a class="message_username" href="">Relfos</a><span class="message_timestamp">1:31 AM</span><span class="message_star"></span><span class="message_content">Relying on third party services for something as critical and personal as email is dangerous.Companies can be hacked, bankruptcies can happen and government entities can force access into emails.</span></div>
+        <div class="message"><a class="message_profile-pic" href=""></a><a class="message_username" href="">Relfos</a><span class="message_timestamp">1:31 AM</span><span class="message_star"></span><span class="message_content">Yes, this is a chat dapp currently running on top of the Phantasma blockchain.</span></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="user-menu"><span class="user-menu_profile-pic"></span>
+		  <span id="account_name" class="user-menu_username">Relfos</span>
+		  <span id="account_address" class="user_address">Address</span><br><br>
+		  <span id="account_connection" class="connection_status">Unlinked</span>
+	  </div>
+      <div class="input-box">
+        <input class="input-box_text" type="text"/>
+      </div>
+    </div>
+  </body>
+</html>
+  
+  
+  
+   
+<script>
+$(function(){
+    $("[data-toggle='tooltip']").tooltip();
+})
+
+let link = new PhantasmaLink("Files");
+link.login( function(success) {
+	if (success) {
+		$('#account_name').text(link.account.name);						
+		$("#account_avatar").attr("src", link.account.avatar);
+		$('#account_address').text(link.account.address.trunc(22));						
+		$('#account_connection').html('<i class="fas fa-bullseye"></i> ' + link.wallet);
+	}
+});
+</script>
+
+</body>
+
+</html>
+ 

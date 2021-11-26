@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Dapps": {
+      "commandName": "Project",
+      "commandLineArgs": "--path=../../../../www"
+    }
+  }
+}

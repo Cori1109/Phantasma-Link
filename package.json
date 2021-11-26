@@ -1,0 +1,19 @@
+{
+  "name": "@andi1109/phantasma-link",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <img\r     src=\"/logo.png\"\r     width=\"125px\"\r   >\r </p>",
+  "main": "phantasma.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andi1109/Phantasma-Link.git"
+  },
+  "author": "Andi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andi1109/Phantasma-Link/issues"
+  },
+  "homepage": "https://github.com/Andi1109/Phantasma-Link#readme"
+}

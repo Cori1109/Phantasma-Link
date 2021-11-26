@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LunarLabs.Server" Version="1.4.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PhantasmaChain\Phantasma.API\Phantasma.API.csproj" />
+    <ProjectReference Include="..\..\..\PhantasmaChain\Phantasma.Blockchain\Phantasma.Blockchain.csproj" />
+    <ProjectReference Include="..\..\..\PhantasmaChain\Phantasma.Core\Phantasma.Core.csproj" />
+    <ProjectReference Include="..\..\..\PhantasmaChain\Phantasma.Ethereum\Phantasma.Ethereum.csproj" />
+    <ProjectReference Include="..\..\..\PhantasmaChain\Phantasma.Neo\Phantasma.Neo.csproj" />
+  </ItemGroup>
+
+</Project>
