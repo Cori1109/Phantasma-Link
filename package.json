@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Andi1109/Phantasma-Link/issues"
   },
-  "homepage": "https://github.com/Andi1109/Phantasma-Link#readme"
+  "homepage": "https://github.com/Andi1109/Phantasma-Link#readme",
+  "publishConfig": {
+    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+  }
 }
